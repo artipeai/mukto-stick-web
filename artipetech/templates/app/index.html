@@ -1,0 +1,307 @@
+{% extends 'app/base.html' %}
+{% block content %}
+{% load static %}
+
+<!-- Enhanced CSS for a Professional E-commerce Look -->
+{% block css %}
+<link rel="stylesheet" href="{% static 'app/css/styles.css' %}">
+<style>
+
+</style>
+{% endblock %}
+
+    <div class="container pt-5 mt-5">
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %}
+        {% endif %}
+    </div>
+    
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="container text-center" data-aos="fade-up">
+        <h1 class="display-4 fw-bold text-white mb-4">স্বাগতম Artipe Tech-এ</h1>
+        <p class="fs-3 text-white mb-4"
+            style="font-weight: 600; background: rgba(0, 0, 0, 0.4); padding: 15px; border-radius: 12px;">
+            🖥️ উইন্ডোজ ইনস্টল, সফটওয়্যার সেটআপ, বা PC ক্র্যাশ? আমরা আছি আপনার পাশে!
+        </p>
+        <p class="lead fs-4 text-white">
+            <span style="font-weight: bold; color: var(--secondary-color);">
+                <image src="/static/assets/usb.png" height="100" width="100"> মুক্তো স্টিক
+            </span> — আপনার সমস্ত টেক
+            সমস্যার এক স্মার্ট সমাধান 😎🔥
+        </p>
+        <a href="#mukto" class="btn btn-glass btn-lg mt-4">আরও জানুন</a>
+    </div>
+</section>
+
+<!-- Image Slider Section -->
+<section class="py-5">
+    <div class="container">
+        <div id="productSlider" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-inner"
+                style="max-width: 800px; margin: auto; height: 450px; border-radius: 15px; overflow: hidden;">
+                <div class="carousel-item active">
+                    <img src="/static/assets/usb.png" class="d-block w-100 h-100 object-fit-cover"
+                        alt="Mukto Stick Product 1" loading="lazy" >
+                </div>
+                <div class="carousel-item">
+                    <img src="/static/assets/logo.png" class="d-block w-100 h-100 object-fit-cover"
+                        alt="Mukto Stick Product 2" loading="lazy">
+                </div>
+                <div class="carousel-item">
+                    <img src="/static/assets/image3.png" class="d-block w-100 h-100 object-fit-cover"
+                        alt="Mukto Stick Product 3">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#productSlider" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#productSlider" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-5">
+    <div class="container glass-container">
+        <h2 class="section-title text-center">আমাদের সম্পর্কে</h2>
+        <p class="fs-5 text-center text-dark" style="line-height: 1.8;">
+            Artipe Tech আপনার জন্য নিয়ে এসেছে উদ্ভাবনী প্রযুক্তি সমাধান। আমাদের মুক্তো স্টিক দিয়ে আপনার ডিজিটাল জীবন হবে
+            আরও সহজ ও সুরক্ষিত।<br><br>
+            <span style="font-weight: 600;">কেন মুক্তো স্টিক?</span>
+            <ul style="text-align: left; display: inline-block; margin-top: 15px;">
+                <li>🛠️ সহজ উইন্ডোজ ও সফটওয়্যার ইনস্টলেশন</li>
+                <li>🖼️ প্রিমিয়াম ৪কে ওয়ালপেপার কালেকশন</li>
+                <li>💾 ফ্রি স্টোরেজ স্পেস</li>
+                <li>🔒 এন্ড-টু-এন্ড এনক্রিপশন</li>
+            </ul><br>
+            ঝামেলা ছাড়াই ঘরে বসে সমাধান করুন আপনার সকল টেক সমস্যা!
+        </p>
+    </div>
+</section>
+
+<!-- Mukto Stick Features -->
+<section id="mukto" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="section-title text-center">মুক্তো স্টিকের ফিচার</h2>
+        <div class="row g-4">
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-microchip fa-3x mb-3" style="color: var(--primary-color);"></i>
+                        <h5 class="card-title">৩২GB ইউএসবি</h5>
+                        <p class="card-text">উচ্চ গতির পেনড্রাইভে Android, Kali Linux, এবং Windows ১১ বুটেবল সিস্টেম।
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-shield-alt fa-3x mb-3" style="color: var(--primary-color);"></i>
+                        <h5 class="card-title">সিকিউর ফাইল</h5>
+                        <p class="card-text">এন্ড-টু-এন্ড এনক্রিপশন সহ আপনার ফাইল সম্পূর্ণ সুরক্ষিত।</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-cloud fa-3x mb-3" style="color: var(--primary-color);"></i>
+                        <h5 class="card-title">ফ্রি স্টোরেজ</h5>
+                        <p class="card-text">OS, সফটওয়্যার, এবং ওয়ালপেপারের পাশাপাশি ফ্রি স্টোরেজ।</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-image fa-3x mb-3" style="color: var(--primary-color);"></i>
+                        <h5 class="card-title">৪কে ওয়ালপেপার</h5>
+                        <p class="card-text">পিসি ও মোবাইলের জন্য প্রিমিয়াম ৪কে ওয়ালপেপার কালেকশন।</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-book-reader fa-3x mb-3" style="color: var(--primary-color);"></i>
+                        <h5 class="card-title">প্রিমিয়াম সফটওয়্যার</h5>
+                        <p class="card-text">VS Code, Antivirus, Avro, এবং আরও দরকারী সফটওয়্যার।</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-5">
+            <a href="#buy" class="btn btn-glass btn-lg">মুক্তো স্টিক কিনুন</a>
+        </div>
+    </div>
+</section>
+
+<!-- Video Tutorials Section -->
+<section id="videos" class="py-5">
+    <div class="container">
+        <h2 class="section-title text-center">টিউটোরিয়াল ভিডিও</h2>
+        <div class="row g-4">
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="ratio ratio-16x9 glass-container">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Mukto Stick Intro" allowfullscreen
+                        style="border-radius: 15px;"></iframe>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="ratio ratio-16x9 glass-container">
+                    <iframe src="https://www.youtube.com/embed/9bZkp7q19f0" title="Mukto Stick Setup" allowfullscreen
+                        style="border-radius: 15px;"></iframe>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="ratio ratio-16x9 glass-container">
+                    <iframe src="https://www.youtube.com/embed/3tmd-ClpJxA" title="Mukto Stick Features" allowfullscreen
+                        style="border-radius: 15px;"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Buy Mukto Stick -->
+<section id="buy" class="py-5 bg-light">
+    <div class="container glass-container">
+        <h2 class="section-title text-center">মুক্তো স্টিক কিনুন</h2>
+        <p class="text-center fs-5">আজই আপনার মুক্তো স্টিক অর্ডার করুন এবং প্রযুক্তির নতুন যুগে প্রবেশ করুন।</p>
+        <div class="text-center">
+            <button class="btn btn-glass btn-lg mt-4" data-bs-toggle="modal" data-bs-target="#orderModal">এখন অর্ডার
+                করুন</button>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-5">
+    <div class="container glass-container">
+        <h2 class="section-title text-center">যোগাযোগ করুন</h2>
+        <form action="/contact/" method="post" class="needs-validation" novalidate>
+            {% csrf_token %}
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label for="name" class="form-label">নাম</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="আপনার নাম" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="email" class="form-label">ইমেইল</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="আপনার ইমেইল" required>
+                </div>
+                <div class="col-12">
+                    <label for="message" class="form-label">বার্তা</label>
+                    <textarea class="form-control" id="message" name="message" rows="5" placeholder="আপনার বার্তা লিখুন"
+                        required></textarea>
+                </div>
+                <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-glass mt-3">পাঠান</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+<!-- Order Modal -->
+<div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="orderModalLabel">মুক্তো স্টিক অর্ডার</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="p-3" action="/order/" method="post">
+                    {% csrf_token %}
+                    <div class="mb-4">
+                        <label for="orderName" class="form-label fw-semibold fs-5">নাম</label>
+                        <input type="text" class="form-control form-control-lg" id="orderName" name="orderName"
+                            placeholder="আপনার পূর্ণ নাম লিখুন" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="orderEmail" class="form-label fw-semibold fs-5">ইমেইল</label>
+                        <input type="email" class="form-control form-control-lg" id="orderEmail" name="orderEmail"
+                            placeholder="ইমেইল ঠিকানা লিখুন" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="orderPhone" class="form-label fw-semibold fs-5">ফোন নম্বর</label>
+                        <input type="tel" class="form-control form-control-lg" id="orderPhone" name="orderPhone"
+                            placeholder="ফোন নম্বর লিখুন" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="orderWhatsApp" class="form-label fw-semibold fs-5">WhatsApp নম্বর (ঐচ্ছিক)</label>
+                        <input type="tel" class="form-control form-control-lg" id="orderWhatsApp" name="orderWhatsApp"
+                            placeholder="WhatsApp নম্বর লিখুন">
+                    </div>
+                    <div class="mb-4">
+                        <label for="orderAddress" class="form-label fw-semibold fs-5">ঠিকানা</label>
+                        <input type="text" class="form-control form-control-lg" id="orderAddress" name="orderAddress"
+                            placeholder="পূর্ণ ঠিকানা লিখুন" required>
+                        <small class="text-muted mt-2 d-block">Google Maps থেকে ঠিকানা নির্বাচন শীঘ্রই আসছে...</small>
+                    </div>
+                    <div class="mb-4">
+                        <label for="orderProduct" class="form-label fw-semibold fs-5">প্রোডাক্ট নির্বাচন</label>
+                        <select class="form-select form-select-lg" id="orderProduct" name="orderProduct" required>
+                            <option value="32gb">32GB Mukto Stick (৳২,০০০)</option>
+                            <option value="64gb">64GB Mukto Stick (৳৩,৫০০)</option>
+                            <option value="128gb">128GB Mukto Stick (৳৫,০০০)</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg w-100" id="submit">অর্ডার করুন</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Done Animation -->
+<div id="doneAnimation" class="done-animation">✓ অর্ডার সম্পন্ন!</div>
+
+<!-- WhatsApp Button -->
+<a href="https://wa.me/01404373837" target="_blank" class="btn btn-glass position-fixed bottom-0 end-0 m-4"
+    style="z-index: 1000;">
+    <i class="fab fa-whatsapp me-2"></i> WhatsApp সাপোর্ট
+</a>
+
+{% endblock %}
+
+{% block js %}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Initialize modals
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="modal"]');
+        [...tooltipTriggerList].forEach(el => new bootstrap.Modal(el));
+        // Order Form Submission
+        const orderForm = document.getElementById('submit');
+        if (orderForm) {
+            orderForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const animation = document.getElementById('doneAnimation');
+                if (animation) {
+                    animation.style.display = 'block';
+                    setTimeout(() => {
+                        animation.style.display = 'none';
+                        const modal = bootstrap.Modal.getInstance(this.closest('.modal'));
+                        if (modal) modal.hide();
+                    }, 2000);
+                }
+            });
+        }
+    });
+</script>
+{% endblock %}

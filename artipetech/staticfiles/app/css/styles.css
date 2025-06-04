@@ -1,0 +1,182 @@
+    :root {
+        --primary-color: #e2136e;
+        --secondary-color: #00bcd4;
+        --text-color: #1a1a1a;
+        --bg-light: #f5f7fa;
+        --glass-bg: rgba(255, 255, 255, 0.15);
+        --glass-border: rgba(255, 255, 255, 0.3);
+        --shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    }
+
+    body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    }
+
+   .hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2c3e50 50%, #4b0082 100%);
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Slightly lighter overlay to let gradient shine */
+    z-index: 1;
+}
+
+    .hero .container {
+        position: relative;
+        z-index: 2;
+        max-width: 1200px;
+    }
+
+    .glass-container {
+        background: var(--glass-bg);
+        backdrop-filter: blur(12px);
+        border: 1px solid var(--glass-border);
+        border-radius: 20px;
+        padding: 3rem;
+        box-shadow: var(--shadow);
+        transition: transform 0.3s ease;
+    }
+
+    .glass-container:hover {
+        transform: translateY(-5px);
+    }
+
+    .btn-glass {
+        background: var(--primary-color);
+        color: #fff;
+        border: none;
+        padding: 1rem 2rem;
+        border-radius: 10px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+    }
+
+    .btn-glass:hover {
+        background: var(--secondary-color);
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        background-color: var(--primary-color);
+        border-radius: 50%;
+        padding: 15px;
+        transition: background-color 0.3s ease;
+    }
+
+    .carousel-control-prev-icon:hover,
+    .carousel-control-next-icon:hover {
+        background-color: var(--secondary-color);
+    }
+
+    .card {
+        background: var(--glass-bg);
+        backdrop-filter: blur(12px);
+        border: 1px solid var(--glass-border);
+        border-radius: 15px;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-8px);
+        box-shadow: var(--shadow);
+    }
+
+    .modal-content {
+        background: var(--glass-bg);
+        backdrop-filter: blur(15px);
+        border: 1px solid var(--glass-border);
+        border-radius: 20px;
+    }
+
+    .form-control,
+    .form-select {
+        background: rgba(255, 255, 255, 0.9);
+        border: 1px solid var(--glass-border);
+        border-radius: 10px;
+        padding: 0.75rem;
+        transition: all 0.3s ease;
+    }
+
+    .form-control:focus,
+    .form-select:focus {
+        border-color: var(--primary-color);
+        box-shadow: 0 0 8px rgba(226, 19, 110, 0.3);
+    }
+
+    .done-animation {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: var(--primary-color);
+        color: #fff;
+        padding: 1.5rem 3rem;
+        border-radius: 12px;
+        font-size: 1.8rem;
+        font-weight: 600;
+        z-index: 3000;
+        animation: pop 0.5s ease-in-out;
+    }
+
+    @keyframes pop {
+        0% { transform: translate(-50%, -50%) scale(0.8); opacity: 0; }
+        100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--text-color);
+        margin-bottom: 2rem;
+        position: relative;
+    }
+
+    .section-title::after {
+        content: '';
+        width: 80px;
+        height: 4px;
+        background: var(--primary-color);
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 2px;
+    }
+
+    @media (max-width: 768px) {
+        .hero {
+            min-height: 70vh;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+        }
+
+        .hero .lead {
+            font-size: 1.2rem;
+        }
+
+        .glass-container {
+            padding: 1.5rem;
+        }
+    }

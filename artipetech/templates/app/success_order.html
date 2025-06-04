@@ -1,0 +1,57 @@
+{% extends 'app/base.html' %}
+{%block css%}
+<style>
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes pulseCheck {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+  }
+  .animate-slideIn {
+    animation: slideIn 0.5s ease-out forwards;
+  }
+  .animate-pulseCheck {
+    animation: pulseCheck 0.8s ease-in-out;
+  }
+</style>
+{%endblock%}
+
+{% block content %}
+<br><br><br><br><br><br>
+
+<div class="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-green-100 via-green-50 to-white text-center px-4 py-10">
+  <div class="bg-white rounded-3xl shadow-2xl p-8 max-w-lg w-full transform transition-all hover:shadow-3xl animate-slideIn">
+    <!-- Checkmark Icon with Pulse Animation -->
+    <div class="text-green-500 text-7xl mb-6 animate-pulseCheck">✅</div>
+    
+    <!-- Heading -->
+    <h1 class="text-4xl font-extrabold text-gray-800 mb-3 tracking-tight">অর্ডার সফল হয়েছে!</h1>
+    
+    <!-- Description -->
+    <p class="text-gray-600 text-lg mb-6 leading-relaxed">আপনার অর্ডারটি আমরা পেয়েছি 🛒<br>ধন্যবাদ আমাদের সেবা ব্যবহারের জন্য 💚</p>
+    
+    <!-- Order Details -->
+    <div class="bg-green-50 text-green-800 text-sm rounded-xl px-6 py-4 mb-6 border border-green-200 animate-slideIn" style="animation-delay: 0.2s;">
+          <!-- Back to Home Button -->
+    <a href="/" class="inline-flex items-center bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-full transition duration-300 ease-in-out transform hover:scale-105">
+      <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+      </svg>
+      হোম পেইজে যান
+    </a>
+    </div>
+  </div>
+</div>
+{% endblock %}
